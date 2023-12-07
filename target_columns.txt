@@ -1,0 +1,17 @@
+First Name - Column 1
+Last Name - Column 2
+City - Column 3
+State - Column 4
+Account Email - Column 5
+Year Quarter - Column 6
+Size - Column 7
+Item 1 - Column 8
+Item 2 - Column 9
+Item 3 - Column 10
+Item 4 - Column 11
+Item 5 - Column 12
+Item 6 - Column 13
+Item 7 - Column 14
+Item 8 - Column 15
+Item 9 - Column 16
+Item 10 - Column 17
