@@ -8,6 +8,7 @@ import state_and_items
 import user_weighted_items
 import final_rec
 import adding_name_to_rec
+import delete_extras
 
 def main():
     first_row
@@ -20,6 +21,7 @@ def main():
     user_weighted_items
     final_rec
     adding_name_to_rec
+    delete_extras
 
 if __name__ == "__main__":
     main() 
