@@ -15,17 +15,6 @@ class Delete_Extras:
 
     def process_and_delete_file(input_file):
         try:
-            predefined_file_to_delete = "ad_recommendations.txt"
-            os.remove(predefined_file_to_delete)
-        except FileNotFoundError:
-            print("File not found. Please check the file path.")
-        except Exception as e:
-            print(f"Error: {e}")
-    input_file_path = "ad_recommendations.txt"
-    process_and_delete_file(input_file_path)
-
-    def process_and_delete_file(input_file):
-        try:
             predefined_file_to_delete = "all_user_data.txt"
             os.remove(predefined_file_to_delete)
         except FileNotFoundError:
