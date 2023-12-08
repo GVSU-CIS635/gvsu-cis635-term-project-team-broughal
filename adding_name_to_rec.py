@@ -1,5 +1,4 @@
 def create_recommendations_csv():
-    # Initialize the recommendations.csv file with headers
     with open('recommendations.csv', 'w') as rec_file:
         rec_file.write('First Name,Last Name,Account Email,Ad Recommendation\n')
 
