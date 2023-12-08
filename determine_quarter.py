@@ -31,14 +31,10 @@ def get_year_quarter_value_from_csv(csv_file_path, target_txt_file_path):
     except Exception as e:
         print(f"Error: {e}")
         return None
-
 csv_file_path = "nike_user_data.csv" 
 target_txt_file_path = "target_columns.txt" 
 
 result = get_year_quarter_value_from_csv(csv_file_path, target_txt_file_path)
-#if result:
-    #print (result)
-
     
 def find_quarter_from_result(result):
     quarters = {
@@ -55,21 +51,15 @@ def find_quarter_from_result(result):
     return "No matching quarter found"
 
 result_from_csv = result 
-
 matching_quarter = find_quarter_from_result(result_from_csv)
-#print(f"The matching quarter for the result is: {matching_quarter}")
-
 csv_file_path = "nike_user_data.csv" 
 target_txt_file_path = "target_columns.txt" 
 
 result = get_year_quarter_value_from_csv(csv_file_path, target_txt_file_path)
-#if result:
-    #print(result)
 
 result_from_csv = result 
 
 matching_quarter = find_quarter_from_result(result_from_csv)
-#print(f"The matching quarter for the result is: {matching_quarter}")
 
 with open('quarter.txt', 'w') as file:
     file.write(matching_quarter)
