@@ -16,18 +16,15 @@ def get_highest_count_items(line):
     highest_count_items = [item for item, count in item_count.items() if count == max_count]
     return highest_count_items, max_count
 
-# Read the file and find the item(s) with the highest count per line
 file_data = read_file('all_user_data.txt')
 recommendations = []
 
 for line in file_data:
     highest_count_items, max_count = get_highest_count_items(line)
-    
-    # If there is a tie between two or more items
-    if len(highest_count_items) > 1:
+
+    if len(highest_count_items) > 1: #this is for when there's a tie for item count between two or more clothing items
         recommendations.append(f"{line.strip().split(', ')[0]}, {', '.join(highest_count_items)}")
     else:
         recommendations.append(f"{highest_count_items[0]}")
 
-# Write the item(s) with the highest count per line to ad_recommendations.txt
 write_recommendations(recommendations)
