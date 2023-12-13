@@ -21,23 +21,19 @@ def get_item_value_from_csv(item_number, line_data):
         results = [] 
         with open(target_txt_file_path, 'r') as target_file:
             lines = target_file.readlines()
-
             for line in lines:
                 if f"Item {item_number} - Column " in line:
                     line_number = int(line.split('Column ')[1])
                     break
-            
             if line_number is None:
                 print(f"Unable to find 'Item {item_number} - Column ' in the target columns file.")
                 return None
-
         if line_number > len(line_data):
             print("The line number exceeds the number of columns in the CSV.")
             return None
         value = line_data[line_number - 1]
         results.append(value) 
         return results 
-
     except Exception as e:
         print(f"Error: {e}")
         return None
@@ -65,7 +61,6 @@ with open(csv_file_path, 'r') as csv_file:
             
             if state_category != "Unknown":
                 file.write(f"{state_category}, ")
-                
                 for item_number in range(1, 11):
                     result = get_item_value_from_csv(item_number, row)
                     if result:
