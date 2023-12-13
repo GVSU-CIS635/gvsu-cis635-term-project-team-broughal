@@ -1,10 +1,10 @@
 def create_recommendations_csv():
+    
     with open('recommendations.csv', 'w') as rec_file:
         rec_file.write('First Name,Last Name,Account Email,Ad Recommendation\n')
 
     with open('final_rec.txt', 'r') as rec_file:
         recommendations = rec_file.readlines()
-
     
     with open('target_columns.txt', 'r') as target_file:
         lines = target_file.readlines()
@@ -30,7 +30,6 @@ def create_recommendations_csv():
                 last_name = row[last_name_col - 1]
                 email = row[email_col - 1]
                 recommendation = recommendations[row_index].strip()
-
                 rec_output_file.write(f'{first_name},{last_name},{email},{recommendation}\n')
 
 create_recommendations_csv()
