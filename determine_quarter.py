@@ -54,11 +54,8 @@ result_from_csv = result
 matching_quarter = find_quarter_from_result(result_from_csv)
 csv_file_path = "nike_user_data.csv" 
 target_txt_file_path = "target_columns.txt" 
-
 result = get_year_quarter_value_from_csv(csv_file_path, target_txt_file_path)
-
 result_from_csv = result 
-
 matching_quarter = find_quarter_from_result(result_from_csv)
 
 with open('quarter.txt', 'w') as file:
