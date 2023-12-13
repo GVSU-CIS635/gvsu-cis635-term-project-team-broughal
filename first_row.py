@@ -2,7 +2,6 @@ import csv
 
 def append_first_row_as_strings(input_file):
     predefined_output_file = "headers.py"
-
     try:
         with open(input_file, 'r') as csv_input:
             csv_reader = csv.reader(csv_input)
